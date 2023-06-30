@@ -1,0 +1,15 @@
+---
+## Default Logstash configuration from Logstash base image.
+## https://github.com/elastic/logstash/blob/main/docker/data/logstash/config/logstash-full.yml
+#
+http.host: 0.0.0.0
+node.name: logstash
+xpack:
+  monitoring:
+    enabled: false
+    elasticsearch:
+      username: 'elastic'
+      password: 'changeme'
+      hosts: ["https://192.168.1.72:9200"]
+      ssl:
+        verification_mode: none
